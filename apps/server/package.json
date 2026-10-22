@@ -1,0 +1,14 @@
+{
+    "name": "@splinehq/server",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx --watch src/main.ts"
+    },
+    "dependencies": {
+        "@splinehq/auth": "workspace:*",
+        "fastify": "^5.12.7",
+        "typebox": "^1.4.2"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "@splinehq/auth",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "main": "src/auth.ts",
+    "scripts": {
+        "generate": "auth generate --config ./src/auth.ts --output ../database/src/schema/auth/schema.ts -y"
+    },
+    "dependencies": {
+        "@better-auth/drizzle-adapter": "1.7.11",
+        "@splinehq/database": "workspace:*",
+        "auth": "^1.7.11",
+        "better-auth": "^1.7.11",
+        "dotenv": "^18.0.8",
+        "uuid": "^14.0.3"
+    }
+}

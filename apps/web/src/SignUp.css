@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+body,
+html {
+    background-color: #121212;
+    color: #fafafa;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: "SN Pro";
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 30vw;
+    border: 1px solid #242424;
+    padding: 24px 16px;
+    border-radius: 12px;
+}
+
+.form > h3 {
+    text-align: center;
+}
+
+input {
+    background-color: #161616;
+    border: 1px solid #323232;
+    border-radius: 8px;
+    padding: 8px 12px;
+    outline: none;
+    color: #fafafa;
+    font-family: "SN Pro";
+    transition: border-color 0.1s ease-out;
+}
+
+input:focus {
+    border-color: #484848;
+}
+
+button {
+    background-color: #eaeaea;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: "SN Pro";
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition:
+        background-color 0.1s ease-out,
+        scale 0.25s ease-out;
+}
+
+button:hover {
+    background-color: #dedede;
+}
+
+button:active {
+    scale: 0.98;
+}

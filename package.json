@@ -1,0 +1,31 @@
+{
+    "name": "spline",
+    "version": "0.0.0",
+    "private": true,
+    "description": "A web-based program to link all your different services in one, unified and modern interface",
+    "license": "AGPL-3.0-or-later",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "oxlint",
+        "lint:fix": "oxlint --fix",
+        "format": "oxfmt",
+        "format:check": "oxfmt --check",
+        "dev": "pnpm -r --parallel run dev",
+        "dev:server": "pnpm -F server run dev",
+        "dev:web": "pnpm -F web run dev",
+        "build": "pnpm -r run build",
+        "db:push": "pnpm -F database push",
+        "db:pull": "pnpm -F database pull",
+        "db:studio": "pnpm -F database studio",
+        "auth:generate": "pnpm -F auth generate"
+    },
+    "devDependencies": {
+        "@types/node": "^24.19.2",
+        "oxfmt": "^0.73.0",
+        "oxlint": "^1.88.0",
+        "tsx": "^4.23.15",
+        "typescript": "^7.0.2"
+    },
+    "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee"
+}
