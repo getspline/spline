@@ -4,11 +4,15 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "tsx --watch src/main.ts"
+        "dev": "tsx watch --exclude ../web --exclude ../../packages/**/dist src/main.ts"
     },
     "dependencies": {
+        "@elysia/node": "^1.4.6",
+        "@elysia/openapi": "^1.4.16",
+        "@sinclair/typebox": "^0.34.52",
         "@splinehq/auth": "workspace:*",
-        "fastify": "^5.12.7",
+        "elysia": "^1.4.30",
+        "openapi-types": "^12.1.3",
         "typebox": "^1.4.2"
     }
 }

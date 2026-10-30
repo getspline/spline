@@ -1,0 +1,31 @@
+:root {
+    --background: #121212;
+    --text: #fafafa;
+
+    --surface: #1c1f26;
+
+    --surface-raised-top: #282c36;
+    --surface-raised-bottom: #20232b;
+
+    --surface-inset-top: #13151a;
+    --surface-inset-bottom: #171920;
+
+    --gradient-raised: linear-gradient(
+        180deg,
+        var(--surface-raised-top),
+        var(--surface-raised-bottom)
+    );
+
+    --gradient-inset: linear-gradient(
+        180deg,
+        var(--surface-inset-top),
+        var(--surface-raised-bottom)
+    );
+
+    --gradient-primary: linear-gradient(180deg, #9693c0, #7f7cb3);
+
+    --shadow: #00000040 0px 2px 8px;
+
+    --body: "SN Pro";
+    --headings: "Jersey 10";
+}

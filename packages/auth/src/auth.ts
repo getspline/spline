@@ -3,7 +3,7 @@ import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
 export { APIError, isAPIError } from "better-auth/api";
 import { db, schema } from "@splinehq/database";
 import { config } from "dotenv";
-import { username } from "better-auth/plugins";
+import { openAPI, username } from "better-auth/plugins";
 import { v7 as uuidv7 } from "uuid";
 
 config({
@@ -21,10 +21,11 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
     },
-    plugins: [username()],
+    plugins: [username(), openAPI()],
     advanced: {
         database: {
             generateId: () => uuidv7(),
         },
     },
+    basePath: "/api/v1/auth",
 });

@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router";
 import { SignUp } from "./SignUp";
+import "./tokens.css";
+import "./main.css";
 
 function Home() {
     return <h1>Spline</h1>;
