@@ -1,0 +1,45 @@
+name: Feature request
+description: Propose a new feature for Spline.
+title: "[Feature Request]: "
+labels: ["type: feature"]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Suggest a feature or improvement for Spline.
+
+    - type: textarea
+      id: summary
+      attributes:
+          label: Summary
+          description: What should Spline be able to do?
+          placeholder: Describe the feature...
+      validations:
+          required: true
+
+    - type: textarea
+      id: motivation
+      attributes:
+          label: Motivation
+          description: Why would this feature be useful?
+      validations:
+          required: true
+
+    - type: textarea
+      id: acceptance
+      attributes:
+          label: Acceptance criteria
+          description: What needs to be true for this feature to be considered complete?
+          placeholder: |
+              - [ ] First requirement
+              - [ ] Second requirement
+      validations:
+          required: true
+
+    - type: textarea
+      id: notes
+      attributes:
+          label: Additional notes
+          description: Dependencies, design references, or technical considerations.
+      validations:
+          required: false
