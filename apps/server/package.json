@@ -4,7 +4,10 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "tsx watch --exclude ../web --exclude ../../packages/**/dist src/main.ts"
+        "dev": "tsx watch --exclude ../web --exclude ../../packages/**/dist src/main.ts",
+        "build": "tsc",
+        "test": "vitest run",
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
         "@elysia/node": "^1.4.6",

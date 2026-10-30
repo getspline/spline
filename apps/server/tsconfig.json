@@ -1,4 +1,5 @@
 {
+    "extends": "../../tsconfig.base.json",
     "compilerOptions": {
         "target": "ES2022",
         "lib": ["ES2022"],
@@ -10,5 +11,6 @@
         "noEmit": false,
         "sourceMap": true
     },
-    "include": ["src"]
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
 }

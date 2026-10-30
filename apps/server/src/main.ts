@@ -108,7 +108,7 @@ app.post("/api/v1/auth/signin", async ({ body, status }) => {
     }
 
     if (!data.success) {
-        switch (data.code) {
+        switch (data.error.code) {
             case "INVALID_REQUEST":
                 status(400);
                 return {

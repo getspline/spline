@@ -17,9 +17,9 @@ type User = {
         email: string;
         emailVerified: boolean;
         name: string;
-        image?: string | null;
-        username?: string | null;
-        displayUsername?: string | null;
+        image?: string | null | undefined;
+        username?: string | null | undefined;
+        displayUsername?: string | null | undefined;
     };
 };
 
@@ -86,11 +86,11 @@ function validatePassword(password: string): AppError | null {
         problems.push("Password is too short");
     }
 
-    if (!REGEX_QUERIES.UPPERCASE_LETTER.test(password)) {
+    if (!REGEX_QUERIES.UPPERCASE_LETTER!.test(password)) {
         problems.push("Password must contain at least one uppercase letter");
     }
 
-    if (!REGEX_QUERIES.SPECIAL_CHARACTER.test(password)) {
+    if (!REGEX_QUERIES.SPECIAL_CHARACTER!.test(password)) {
         problems.push("Password must contain at least one special character");
     }
 
@@ -119,7 +119,7 @@ async function signUp(email: string, username: string, password: string): Promis
     username = username.trim();
     email = email.trim();
 
-    if (!REGEX_QUERIES.EMAIL.test(email)) {
+    if (!REGEX_QUERIES.EMAIL!.test(email)) {
         return {
             success: false,
             error: {
@@ -129,7 +129,7 @@ async function signUp(email: string, username: string, password: string): Promis
         };
     }
 
-    if (!REGEX_QUERIES.USERNAME.test(username)) {
+    if (!REGEX_QUERIES.USERNAME!.test(username)) {
         return {
             success: false,
             error: {

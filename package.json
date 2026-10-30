@@ -6,11 +6,12 @@
     "license": "AGPL-3.0-or-later",
     "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "vitest run",
         "lint": "oxlint",
         "lint:fix": "oxlint --fix",
         "format": "oxfmt",
         "format:check": "oxfmt --check",
+        "typecheck": "pnpm -r --parallel run typecheck",
         "dev": "pnpm -r --parallel run dev",
         "dev:server": "pnpm -F server run dev",
         "dev:web": "pnpm -F web run dev",
@@ -25,7 +26,8 @@
         "oxfmt": "^0.73.0",
         "oxlint": "^1.88.0",
         "tsx": "^4.23.15",
-        "typescript": "^7.0.2"
+        "typescript": "^7.0.2",
+        "vitest": "^5.0.5"
     },
     "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee"
 }
