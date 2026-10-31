@@ -84,4 +84,4 @@ Report all bugs through issues, using the pre-made issue template, before making
 
 ## License
 
-All changes are licensed accordingly to [LICENSE](./LICENSE)/
+All changes are licensed accordingly to [LICENSE](./LICENSE).
