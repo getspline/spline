@@ -19,7 +19,7 @@
     --gradient-inset: linear-gradient(
         180deg,
         var(--surface-inset-top),
-        var(--surface-raised-bottom)
+        var(--surface-inset-bottom)
     );
 
     --gradient-primary: linear-gradient(180deg, #9693c0, #7f7cb3);
