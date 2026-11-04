@@ -5,7 +5,7 @@ import { IconKeyFilled, IconMailFilled, IconUserFilled } from "@tabler/icons-rea
 export function SignUp() {
     return (
         <div className="root">
-            <div className="form">
+            <form className="form">
                 <h3 className="header">Create an Account</h3>
                 <Input
                     name="username"
@@ -40,8 +40,7 @@ export function SignUp() {
                 <button id="signUp" className="surface--raised shadow primary">
                     Sign Up!
                 </button>
-            </div>
-            <div className="image"></div>
+            </form>
         </div>
     );
 }
