@@ -14,6 +14,8 @@
         "@elysia/openapi": "^1.4.16",
         "@sinclair/typebox": "^0.34.52",
         "@splinehq/auth": "workspace:*",
+        "@splinehq/database": "workspace:*",
+        "drizzle-orm": "1.0.0-rc.5",
         "elysia": "^1.4.30",
         "openapi-types": "^12.1.3",
         "typebox": "^1.4.2"
