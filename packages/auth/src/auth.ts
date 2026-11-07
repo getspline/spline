@@ -5,6 +5,7 @@ import { db, schema } from "@splinehq/database";
 import { config } from "dotenv";
 import { openAPI, username } from "better-auth/plugins";
 import { v7 as uuidv7 } from "uuid";
+import { createAuthMiddleware } from "better-auth/api";
 
 config({
     path: "../../.env",
@@ -26,6 +27,14 @@ export const auth = betterAuth({
         database: {
             generateId: () => uuidv7(),
         },
+        cookies: {
+            session_token: {
+                name: "spline_auth_token",
+            },
+        },
     },
     basePath: "/api/v1/auth",
+    hooks: {
+        after: createAuthMiddleware(async (ctx) => {}),
+    },
 });
