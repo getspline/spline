@@ -54,6 +54,9 @@ export function SignIn() {
                     className="surface--inset shadow"
                     required={true}
                 ></Input>
+                <p id="redirect">
+                    Don't have an account? <a href="/signup">Sign up instead.</a>
+                </p>
                 <button id="signIn" className="surface--raised shadow primary" type="submit">
                     Sign In!
                 </button>

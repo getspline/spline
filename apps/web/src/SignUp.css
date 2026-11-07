@@ -83,3 +83,7 @@ label {
 #signUp:active {
     scale: 0.98;
 }
+
+#redirect {
+    opacity: 0.9;
+}

@@ -62,6 +62,9 @@ export function SignUp() {
                     className="surface--inset shadow"
                     required={true}
                 ></Input>
+                <p id="redirect">
+                    Already have an account? <a href="/signin">Sign in to your account.</a>
+                </p>
                 <button id="signUp" className="surface--raised shadow primary" type="submit">
                     Sign Up!
                 </button>
