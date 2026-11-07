@@ -44,6 +44,7 @@ export const auth = betterAuth({
                 .values({
                     id: uuidv7(),
                     name: `${newSession?.user.name}'s workspace`,
+                    ownerId: newSession?.user.id as string,
                 })
                 .returning();
             await db.insert(workspaceMembers).values({

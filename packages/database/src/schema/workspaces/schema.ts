@@ -6,16 +6,19 @@ export const workspaces = pgTable("workspaces", {
     id: text("id").primaryKey().notNull(),
     name: text("name").notNull(),
     created_at: timestamp("created_at").defaultNow(),
+    ownerId: text()
+        .references(() => user.id, { onDelete: "restrict" }) // when the owner deletes their account, they should first be prompted to transfer ownership
+        .notNull(),
 });
 
 export const workspaceMembers = pgTable("workspace_members", {
     workspace_id: text("workspace_id")
         .notNull()
-        .references(() => workspaces.id),
+        .references(() => workspaces.id, { onDelete: "cascade" }),
     is_owner: boolean("is_owner").default(false),
     member_id: text("member_id")
         .notNull()
-        .references(() => user.id),
+        .references(() => user.id, { onDelete: "cascade" }),
 });
 
 export const workspaceRelations = defineRelationsPart(
