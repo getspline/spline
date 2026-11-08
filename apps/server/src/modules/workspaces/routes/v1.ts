@@ -68,5 +68,8 @@ v1.get("/:workspaceId", async ({ params: { workspaceId }, status, headers }) => 
         });
     }
 
-    return result?.workspace ?? null;
+    return {
+        success: true,
+        data: result.workspace,
+    };
 });
