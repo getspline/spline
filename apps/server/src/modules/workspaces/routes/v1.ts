@@ -13,7 +13,13 @@ v1.get("/:workspaceId", async ({ params: { workspaceId }, status, headers }) => 
             headers,
         });
     } catch (e) {
-        return status(500, e);
+        return status(500, {
+            success: false,
+            error: {
+                code: "UNKNOWN_AUTH_ERROR",
+                message: "An unknown authentication error occured, try logging out and back in",
+            },
+        });
     }
 
     if (!session) {
