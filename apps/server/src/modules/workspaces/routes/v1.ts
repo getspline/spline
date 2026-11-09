@@ -13,6 +13,7 @@ v1.get("/:workspaceId", async ({ params: { workspaceId }, status, headers }) => 
             headers,
         });
     } catch (e) {
+        console.error(e);
         return status(500, {
             success: false,
             error: {
